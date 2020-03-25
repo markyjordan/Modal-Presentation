@@ -8,7 +8,11 @@
 
 import UIKit
 
+// MARK: ViewController: UIViewController
+
 class ViewController: UIViewController {
+    
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
