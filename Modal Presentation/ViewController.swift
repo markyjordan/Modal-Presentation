@@ -13,14 +13,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // implement present button
+        // implement 'Present' button
         let presentButton = UIButton()
         presentButton.frame = CGRect(x: 100, y: 100, width: 100, height: 60)
         presentButton.setTitle("Present", for: .normal)
         presentButton.setTitleColor(UIColor.blue, for: .normal)
         view.addSubview(presentButton)
+        
+        // add 'Present' button's target action
+        presentButton.addTarget(self, action: #selector(modalPresentation), for: UIControl.Event.touchUpInside)
     }
 
-
+    // function for modal presentation of a view controller
+    @objc func modalPresentation() {
+        let nextController = UIImagePickerController()
+        present(nextController, animated: true, completion: nil)
+    }
 }
 
