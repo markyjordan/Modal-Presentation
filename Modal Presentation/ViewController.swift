@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // implement present button
+        let presentButton = UIButton()
+        presentButton.frame = CGRect(x: 100, y: 100, width: 100, height: 60)
+        presentButton.setTitle("Present", for: .normal)
+        presentButton.setTitleColor(UIColor.blue, for: .normal)
+        view.addSubview(presentButton)
     }
 
 
